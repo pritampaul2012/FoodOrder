@@ -1,7 +1,7 @@
 import React from "react";
 import useInput from "../Hooks/use-input";
 import classes from "./CheckoutForm.module.css";
-// import axios from "axios";
+import axios from "axios";
 
 const isNotEmpty = (value) => value.trim() !== "";
 const isNotFiveDig = (value) => value.trim().length === 6;
@@ -55,7 +55,7 @@ function CheckOutForm(props) {
       city: enteredCity,
       date: new Date(),
     };
-    // axios.post("http://localhost:5000/orders", enteredData);
+    axios.post("http://localhost:5000/orders", enteredData);
     props.onConfirm(enteredData);
     nameReset();
     streetReset();
