@@ -43,7 +43,7 @@ function Cart(props) {
       orderedItems: CartCtx.items,
     };
     console.log(CartCtx.items);
-    // axios.post("http://localhost:5000/orders", orderDetails);
+    axios.post("http://localhost:5000/orders", orderDetails);
   };
   return (
     <Modal onClose={props.onClose}>

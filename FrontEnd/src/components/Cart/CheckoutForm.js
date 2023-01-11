@@ -55,7 +55,7 @@ function CheckOutForm(props) {
       city: enteredCity,
       date: new Date(),
     };
-    axios.post("http://localhost:5000/orders", enteredData);
+    // axios.post("http://localhost:5000/orders", enteredData);
     props.onConfirm(enteredData);
     nameReset();
     streetReset();
